@@ -30,6 +30,16 @@ bool isPrime(int n)
 	}
 	return true;
 }
+
+bool soHoanHao(int n){
+	int t =0;
+	for(int i =0; i < n; i++){
+		if(n % i == 0)
+			t+= t+ i;
+	}
+	if(n == t)
+		return true;
+	return false;
 int main()
 {
 	cout << "DAY LA CHUONG TRINH DE THUC HANH GIT";
@@ -48,6 +58,10 @@ int main()
 		cout<<"la so nguyen to";
 	else
 		cout<<"Khong la so nguyen to";
+	if(soHoanHao(a))
+		cout<<"A la so hoan hao";
+	else
+		cout<<"A khong phai so hoan hao";
 	system("pause");
 	return 0;
 }
