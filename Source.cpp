@@ -19,6 +19,17 @@ float thuong(int a, int b)
 	}
 	return (float)a/b;
 }
+bool isPrime(int n)
+{
+	if(n<2)
+		return false;
+	for(int i=2; i<=sqrt(n);i++)
+	{
+		if(n%i==0)
+			return false;
+	}
+	return true;
+}
 
 bool soHoanHao(int n){
 	int t =0;
@@ -41,6 +52,12 @@ int main()
 	cout <<"Hieu =" hieu(a,b)<<endl;
 	cout <<"Tich =" tich(a,b)<<endl;
 	cout <<"Thuong =" thuong(a,b)<<endl;
+	cout<<"Nhap n"
+	cin>>n;
+	if(isPrime(n))
+		cout<<"la so nguyen to";
+	else
+		cout<<"Khong la so nguyen to";
 	if(soHoanHao(a))
 		cout<<"A la so hoan hao";
 	else
