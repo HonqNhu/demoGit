@@ -19,6 +19,16 @@ float thuong(int a, int b)
 	}
 	return (float)a/b;
 }
+
+bool soHoanHao(int n){
+	int t =0;
+	for(int i =0; i < n; i++){
+		if(n % i == 0)
+			t+= t+ i;
+	}
+	if(n == t)
+		return true;
+	return false;
 int main()
 {
 	cout << "DAY LA CHUONG TRINH DE THUC HANH GIT";
@@ -31,6 +41,10 @@ int main()
 	cout <<"Hieu =" hieu(a,b)<<endl;
 	cout <<"Tich =" tich(a,b)<<endl;
 	cout <<"Thuong =" thuong(a,b)<<endl;
+	if(soHoanHao(a))
+		cout<<"A la so hoan hao";
+	else
+		cout<<"A khong phai so hoan hao";
 	system("pause");
 	return 0;
 }
